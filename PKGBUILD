@@ -5,7 +5,7 @@
 
 # Maintainer: Your Name <k.sath214@gmail.com>
 pkgname=nintenno-st
-pkgver=0.8.4.r2.503e99f
+pkgver=0.8.4.r3.01f86e7
 pkgrel=1
 pkgdesc="My Personal st build at https://github.com/KSatheeskumar21/nintenno-st"
 arch=(x86_64)
@@ -29,7 +29,7 @@ md5sums=('SKIP')
 validpgpkeys=()
 
 prepare() {
-	cd "${_pkgname}"
+	cd "$pkgname"
 	printf "0.8.4.r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
 }
 
@@ -42,7 +42,8 @@ package() {
 	cd nintenno-st
 	mkdir -p ${pkgdir}/opt/${pkgname}
 	cp -rf * ${pkgdir}/opt/${pkgname}
-	sudo make PREFIX=/usr/local DESTIR="${pkgdir}" install
+	# sudo make PREFIX=/usr/local DESTIR="${pkgdir}" install
+	sudo make install
 	install -Dm644 LICENSE "${pkgdir}/usr/share/licenses/nintenno-st/LICENSE"
 	install -Dm644 README "${pkgdir}/usr/share/doc/nintenno-st/README"
 }
