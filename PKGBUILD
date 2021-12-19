@@ -5,7 +5,7 @@
 
 # Maintainer: Your Name <k.sath214@gmail.com>
 pkgname=nintenno-st
-pkgver=0.8.4.r4.fa878d2
+pkgver=0.8.4.r6.fddfaa8
 pkgrel=1
 pkgdesc="My Personal st build at https://github.com/KSatheeskumar21/nintenno-st"
 arch=(x86_64)
