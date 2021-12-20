@@ -42,8 +42,7 @@ package() {
 	cd nintenno-st
 	mkdir -p ${pkgdir}/opt/${pkgname}
 	cp -rf * ${pkgdir}/opt/${pkgname}
-	sudo make PREFIX=/usr/local DESTIR="${pkgdir}" install
-	# sudo make install
+	make PREFIX=/usr/local DESTIR="${pkgdir}" install
 	install -Dm644 LICENSE "${pkgdir}/usr/share/licenses/nintenno-st/LICENSE"
 	install -Dm644 README "${pkgdir}/usr/share/doc/nintenno-st/README"
 }
