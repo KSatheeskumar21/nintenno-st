@@ -98,7 +98,7 @@ float alpha = 1.0;
  * doom-one.h
  * dracula.h
  */
-#include "themes/doom-one.h"
+#include "themes/tokyo-night.h"
 
 /*
  * Default colors (colorname index)
